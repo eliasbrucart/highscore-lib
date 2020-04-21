@@ -14,6 +14,11 @@ namespace scorelib
 	public:
 		Score();
 		~Score();
+		void addPlayerToScore(string name, int score);
+		void removePlayerToScore(string name);
+		int getScoreList();
+		int getScorePos(int pos);
+		void clearScore();
 	};
 }
 
