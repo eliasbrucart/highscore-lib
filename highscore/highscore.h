@@ -9,9 +9,9 @@ namespace scorelib
 	class Score
 	{
 	private:
+	public:
 		int _score[10];
 		string _name[10];
-	public:
 		Score();
 		~Score();
 		void addPlayerToScore(string name, int score);
