@@ -6,12 +6,14 @@ using namespace std;
 
 namespace scorelib
 {
+	const int socreSize = 10;
 	class Score
 	{
 	private:
+		int _pos;
 	public:
-		int _score[10];
-		string _name[10];
+		int _score[socreSize];
+		string _name[socreSize];
 		Score();
 		~Score();
 		void addPlayerToScore(string name, int score);
