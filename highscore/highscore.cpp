@@ -51,7 +51,7 @@ namespace scorelib
 		}
 	}
 
-	void Score::removePlayerToScore(string name)
+	void Score::removePlayerToScore(int pos)
 	{
 
 	}

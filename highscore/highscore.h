@@ -17,7 +17,7 @@ namespace scorelib
 		Score();
 		~Score();
 		void addPlayerToScore(string name, int score);
-		void removePlayerToScore(string name);
+		void removePlayerToScore(int pos);
 		void getScoreList();
 		int getScorePos(int pos);
 		void clearScore();
