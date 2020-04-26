@@ -53,7 +53,7 @@ namespace scorelib
 
 	void Score::removePlayerToScore(int pos)
 	{
-
+		_score[pos] = 0;
 	}
 
 	void Score::getScoreList()
