@@ -1,5 +1,9 @@
 #include "highscore.h"
 
+#include <iostream>
+
+using namespace std;
+
 namespace scorelib
 {
 	Score::Score()
@@ -52,7 +56,7 @@ namespace scorelib
 
 	}
 
-	int Score::getScoreList()
+	void Score::getScoreList()
 	{
 
 	}
