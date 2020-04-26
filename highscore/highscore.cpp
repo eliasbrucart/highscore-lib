@@ -58,7 +58,12 @@ namespace scorelib
 
 	void Score::getScoreList()
 	{
-
+		cout << "---===SocreList===---" << endl;
+		for (int i = 0; i < scoreSize; i++)
+		{
+			cout << "Name => " << _name[i] << "Score => " << _score[i] << endl;
+		}
+		cout << "---===ScoreList===---" << endl;
 	}
 
 	int Score::getScorePos(int pos)
