@@ -59,11 +59,14 @@ namespace scorelib
 
 	int Score::getScorePos(int pos)
 	{
-
+		return _score[pos];
 	}
 
 	void Score::clearScore()
 	{
-
+		for (int i = 0; i < scoreSize; i++)
+		{
+			_score[i] = 0;
+		}
 	}
 }
