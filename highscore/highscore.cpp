@@ -6,51 +6,48 @@ using namespace std;
 
 namespace scorelib
 {
-	void addPlayerToScore(string name, int score)
+	static const int scoreSize = 10;
+	static int pos = 0;
+	static int score[scoreSize] = {0,0,0,0,0,0,0,0,0,0};
+	static string name[scoreSize] = {" ", " ", " ", " ", " ", " ", " ", " ", " ", " "};
+
+	void addPlayerToScore(string namePlayer, int scorePoints)
 	{
-		if (_score[_pos] == 0 && _name[_pos] == " ")
+		if (pos < scoreSize)
 		{
-			_score[_pos] = score;
-			_name[_pos] = name;
-		}
-		else 
-		{
-			_pos++;
-			if (_score[_pos] == 0 && _name[_pos] == " ")
+			if (score[pos] == 0 && name[pos] == " ")
 			{
-				_score[_pos] = score;
-				_name[_pos] = name;
+				score[pos] = scorePoints;
+				name[pos] = namePlayer;
+				pos++;
 			}
 		}
 	}
 
-	void removePlayerToScore(int pos)
+	void removePlayerToScore(int posScore)
 	{
-		_score[pos] = 0;
-		_name[pos] = " ";
+		score[posScore] = 0;
+		name[posScore] = " ";
 	}
 
-	void getScoreList()
+
+	int getScorePos(int posScore)
 	{
-		cout << "---===SocreList===---" << endl;
-		for (int i = 0; i < scoreSize; i++)
-		{
-			cout << "Name => " << _name[i] << "Score => " << _score[i] << endl;
-		}
-		cout << "---===ScoreList===---" << endl;
+		return score[posScore];
 	}
 
-	int getScorePos(int pos)
+	string getScoreName(int posName)
 	{
-		return _score[pos];
+		return name[posName];
 	}
 
 	void clearScore()
 	{
 		for (int i = 0; i < scoreSize; i++)
 		{
-			_score[i] = 0;
-			_name[i] = " ";
+			score[i] = 0;
+			name[i] = " ";
 		}
+		pos = 0;
 	}
 }
