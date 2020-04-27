@@ -32,7 +32,7 @@ namespace scorelib
 		for (int i = 0; i < scoreSize; i++)
 		{
 			_pos++;
-			if (_score[_pos] != i && _pos > i && _pos < i + 2 && _score[_pos] = 0 && _name[_pos] == " ")
+			if (_pos > i && _pos < i + 2 && _score[_pos] == 0 && _name[_pos] == " ")
 			{
 				_score[_pos] = score;
 				_name[_pos] = name;
