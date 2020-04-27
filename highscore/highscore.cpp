@@ -6,33 +6,17 @@ using namespace std;
 
 namespace scorelib
 {
-	Score::Score()
-	{
-		_pos = 0;
-		for (int i = 0; i < scoreSize; i++)
-		{
-			_score[i] = 0;
-			_name[i] = " ";
-		}
-	}
-
-	Score::~Score()
-	{
-
-	}
-
-	void Score::addPlayerToScore(string name, int score)
+	void addPlayerToScore(string name, int score)
 	{
 		if (_score[_pos] == 0 && _name[_pos] == " ")
 		{
 			_score[_pos] = score;
 			_name[_pos] = name;
 		}
-
-		for (int i = 0; i < scoreSize; i++)
+		else 
 		{
 			_pos++;
-			if (_pos > i && _pos < i + 2 && _score[_pos] == 0 && _name[_pos] == " ")
+			if (_score[_pos] == 0 && _name[_pos] == " ")
 			{
 				_score[_pos] = score;
 				_name[_pos] = name;
@@ -40,13 +24,13 @@ namespace scorelib
 		}
 	}
 
-	void Score::removePlayerToScore(int pos)
+	void removePlayerToScore(int pos)
 	{
 		_score[pos] = 0;
 		_name[pos] = " ";
 	}
 
-	void Score::getScoreList()
+	void getScoreList()
 	{
 		cout << "---===SocreList===---" << endl;
 		for (int i = 0; i < scoreSize; i++)
@@ -56,12 +40,12 @@ namespace scorelib
 		cout << "---===ScoreList===---" << endl;
 	}
 
-	int Score::getScorePos(int pos)
+	int getScorePos(int pos)
 	{
 		return _score[pos];
 	}
 
-	void Score::clearScore()
+	void clearScore()
 	{
 		for (int i = 0; i < scoreSize; i++)
 		{
